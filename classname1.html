@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .arpit{
+        width: 200px;
+        padding: 4px;
+        margin-bottom: 20px;
+        border: radius 10px;;
+    }
+    .zoom{
+        transform: scale(1.2);
+    }
+</style>
+<body>
+    
+<div class="arpit">
+    <img src="https://media.assettype.com/knocksense%2F2025-02-17%2F86s7lyhx%2Fpjimage-18.avif?rect=0%2C0%2C1575%2C886&w=480&auto=format%2Ccompress&fit=max" alt="">
+</div>
+<div class="arpit">
+    <img src="https://media.assettype.com/knocksense%2F2025-02-17%2F86s7lyhx%2Fpjimage-18.avif?rect=0%2C0%2C1575%2C886&w=480&auto=format%2Ccompress&fit=max" alt="">
+</div>
+
+<div class="arpit">
+    <img src="https://media.assettype.com/knocksense%2F2025-02-17%2F86s7lyhx%2Fpjimage-18.avif?rect=0%2C0%2C1575%2C886&w=480&auto=format%2Ccompress&fit=max" alt="">
+</div>
+
+<br>
+<br>
+<br>
+
+<button onclick="clickme()">click me</button>
+
+<script>
+function clickme(){
+const value=document.getElementsByClassName("arpit")
+for(let i=0;i<value.length;i++){
+   value[i].classList.toggle("zoom")
+}
+}
+</script>
+
+</body>
+</html>
