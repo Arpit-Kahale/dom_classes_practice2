@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <!-- NOW WE ARE DICUSS ABOUT document.getElementbyClass() -->
+
+    <!-- WE have the multiple elements with the same class name -->
+
+    <p class="venkat">this is para</p>
+    <p class="venkat">this is para</p>
+    <p class="venkat">this is para</p>
+    <p class="venkat">this is para</p>
+    <p class="venkat">this is para</p>
+    <p class="something">this is para</p>
+    <p class="something">this is para</p>
+    <p class="something">this is para</p>
+    <p class="something">this is para</p>
+
+    <div class="arpit">hey buddyy this me</div>
+    <div class="arpit">hey buddyy this me</div>
+    <div class="arpit">hey buddyy this me</div>
+
+
+    <!-- we have create one button is for change the text -->
+    <button onclick="greet()" class="bg-blue-300 px-4 py-2 m-4 rounded-lg hover:bg-blue-600">Submit</button>
+
+    <script>
+        function greet() {
+            const value = document.getElementsByClassName("venkat")
+            const some = document.getElementsByClassName("something")
+          const arpit = document.getElementsByClassName("arpit")
+            // we need for loop to change the html elemnt without for loop its not possible
+            for (let i = 0; i < value.length; i++) {
+                value[i].textContent = "ARPITTTTTTTTT"
+            }
+
+            value[3].style.background = "green"
+            some[1].style.background = "red";
+
+            for (let i = 0; i < value.length; i++) {
+                some[i].textContent = "opppppppppppppp"
+            }
+            for (let i = 0; i < arpit.length; i++) {
+                arpit[i].textContent = "jai shree rammaaa"
+                arpit[i].style.background = "green"
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
