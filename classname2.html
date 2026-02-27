@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .task{
+        background-color: green;
+        padding: 10px;
+        margin: 10px;
+        height: 30px;
+        text-align: center;
+        font-size: 20px;
+        color: aliceblue;
+    }
+</style>
+<style>
+    .completed{
+
+        text-decoration: line-through;
+    }
+</style>
+<body>
+    <div class="task completed">go to gym</div>
+    <div class="task">go to movie</div>
+    <div class="task completed">raed html</div>
+    <div class="task">show all</div>
+    <div class="task completed">showAll</div>
+
+    <button onclick="showcompleted()" style="background-color: rgb(132, 132, 199);height: 40px;">show only completed task</button>
+    <button onclick="shownotcompleted()" style="background-color: rgb(132, 132, 199);height: 40px;">show only not completed task</button>
+    <button onclick="showall()"style="background-color: rgb(132, 132, 199);height: 40px;">show all</button>
+
+    <script>
+        function showcompleted(){
+            const task1=document.getElementsByClassName("task")
+            for(let i=0;i<task1.length;i++){
+                if(task1[i].classList.contains("completed")){
+
+                    task1[i].style.display="block"
+
+                }
+                else{
+                     task1[i].style.display="none"
+                }
+            }
+        }
+
+        function shownotcompleted(){
+            const task1=document.getElementsByClassName("task")
+            for(let i=0;i<task1.length;i++){
+              if(!task1[i].classList.contains("completed")){
+
+                    task1[i].style.display="block"
+
+                }
+                else{
+                     task1[i].style.display="none"
+                }
+            }
+        }
+
+        function showall(){
+        const task1=document.getElementsByClassName("task")
+            for(let i=0;i<task1.length;i++){
+                task1[i].style.display="block"
+        }
+    }
+    </script>
+</body>
+
+</html>
