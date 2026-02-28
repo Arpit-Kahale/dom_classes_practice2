@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">My name is arpit</h1>
+    <p class="para">welcome to india </p>
+    <div>Swagat hai apka </div>
+    <br>
+    <br>
+
+    <button onclick="change()">ChangeText</button>
+      
+    <script>
+        function change(){
+            const head=document.querySelector("#heading")
+            head.textContent="How are you brother"
+            const paragraph=document.querySelector(".para")
+            paragraph.textContent="How can i help you"
+            const tag=document.querySelector("div")
+            tag.textContent="App kaise hoo"
+        }
+    </script>
+</body>
+</html>
