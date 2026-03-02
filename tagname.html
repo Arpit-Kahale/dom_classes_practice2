@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<style>
+    .op {
+        background-color: rgb(0, 0, 0);
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+
+    }
+</style>
+
+<body>
+    <div class="p-4">
+        <p class="font-bold mb-4">Apple</p>
+        <p class="font-bold mb-4">Orange</p>
+        <p class="font-bold mb-4">Coconut</p>
+        <p class="font-bold mb-4">Mango</p>
+    </div>
+
+    <br>
+    <br>
+
+
+    <button onclick="tags()" class="px-4 py-2 bg-blue-300 hover:bg-blue-600 rounded-lg m-4">clickme</button>
+    <script>
+        function tags() {
+            const tags = document.getElementsByTagName("p")
+            for (let i = 0; i < tags.length; i++) {
+                tags[i].style.color = "red"
+                tags[i].classList.toggle("op")
+                tags[i].classList.add("Rounded-lg", "font-bold", "h-20", "item-center",)
+            }
+        }
+    </script>
+</body>
+
+</html>

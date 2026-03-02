@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="name" placeholder="enter your name"/>
+      <input type="email" placeholder="enter your email"/>
+        <input type="password" placeholder="enter your password"/>
+
+        <button onclick="valdateform()">click</button>
+
+        <p id="msg"></p>
+
+        <script>
+            function valdateform(){
+                const value=document.getElementsByTagName("input")
+                for(let i=0;i<value.length;i++){
+
+                    if(value[i].value===""){
+                        document.getElementById("msg").innerText="please enter the full details"
+                        return;//it will stops the executions 
+
+                    }
+                }
+                document.getElementById("msg").innerText="submitted sucessfully"
+                 
+            }
+        </script>
+    
+</body>
+</html>
